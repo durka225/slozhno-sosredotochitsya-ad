@@ -1,16 +1,51 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff0070;
+  --main-bg-color: #00183f;
+  --nav-color: #ff0070;
+  --header-logo-color: #db00ff;
+  --footer-logo-color: #db00ff;
+  --main-text-color: #f1b2ce;
+  --main-heading-color: #00183f;
+  --section-heading-color: #ff0070;
 }
 
 .theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  background-image: url('../images/cover-image-dark.png');
+}
+
+.theme_dark .hero__record-label {
+  display: block;
+}
+
+.theme_dark .theme-switcher__button_active {
+  border: 1px solid var(--nav-color);
+}
+
+.theme-dark .theme-switcher__button:hover {
+  --nav-hover-color: rgb(255 0 112 / 0.4);
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --main-bg-color: #00183f;
+    --nav-color: #ff0070;
+    --header-logo-color: #db00ff;
+    --footer-logo-color: #db00ff;
+    --main-text-color: #f1b2ce;
+    --main-heading-color: #00183f;
+    --section-heading-color: #ff0070;
+  }
+
+  .page {
+    background-image: url('../images/cover-image-dark.png');
+  }
+
+  .theme-switcher__button_active {
+    border: 1px solid var(--nav-color);
+  }
+
+  .theme-switcher__button:hover {
+    --nav-hover-color: rgb(255 0 112 / 0.4);
+  }
 }
